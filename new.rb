@@ -284,3 +284,14 @@ input = gets.chomp()
 
 puts(find_day(input))
 
+# while loop 
+
+index = 1;
+
+while index <=5;
+
+    puts("hello there #{index}")
+    # index++;
+    index += 1;
+end
+

@@ -72,29 +72,21 @@ This array is missing the number 3. The goal of this problem is to write code th
 figures out that the number 3 is missing.
 =end
 
-def findEle(arr, ele)
-
-    puts (arr.include?(ele))
-    print (arr.sort())
-
-
-
-
+def findEle(arr)
+    index = 1
+    while index <=10
+        # puts (arr.include?(index))
+        cond = arr.include?(index)
+        if cond == false
+             puts ("\n#{index}")
+        end
+        index += 1;
+    end
 end
 
 number =  [2, 1, 5, 4, 6, 9, 7, 8, 10]
 
-number.map {|ele| ele*2}
+findEle(number)
 
 
-print(number)
 
-
-# findEle(number, 3)
-
-
-array = [1,2,3]
-array.each { |n| n * 2 }
-
-
-print(array)
