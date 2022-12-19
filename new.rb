@@ -77,154 +77,210 @@
 
 # Hashes in Ruby ................
 
-states = {
-    :India => 'IN',
-    :America => 'USA',
-    :UnintedKingdom => 'UK',
-}
+# states = {
+#     :India => 'IN',
+#     :America => 'USA',
+#     :UnintedKingdom => 'UK',
+# }
 
-puts (states[:America])
-
-
-# methods ................................
-
-def sayHello
-
-    puts ("Hello world User!")
-
-end
-
-sayHello
+# puts (states[:America])
 
 
-def newMethod(name)
-    # puts("ENter your name here...")
-    # name = gets.chomp()
-    puts ("Hello " + name)
+# # methods ................................
 
-end
+# def sayHello
 
-newMethod('sakthi')
+#     puts ("Hello world User!")
 
-# Using comment
+# end
 
-=begin
-
-This is a multi-line comment!
-
-=end
-
-# Using methods and loops 
-
-def conditonLoop
-boolean = true
-user= true
-
-    if boolean and user
-        puts("User and boolean is true so Printed the result...")
-
-    else 
-        puts("User and boolean is false so Printed the result...")
-    end
+# sayHello
 
 
-end
+# def newMethod(name)
+#     # puts("ENter your name here...")
+#     # name = gets.chomp()
+#     puts ("Hello " + name)
 
-conditonLoop()
+# end
 
+# newMethod('sakthi')
 
-# using if statements with operators
+# # Using comment
 
-isMale = false
-isHieght = false
+# =begin
 
-if isMale and isHieght 
-    puts("You are a tall male")
-elsif isMale or isHieght
-    puts("you are a tall or male")
-else
-    puts("you are not a male and not so tall")
-end
+# This is a multi-line comment!
 
+# =end
 
-# Using if statements with relational operators!
+# # Using methods and loops 
 
+# def conditonLoop
+# boolean = true
+# user= true
 
-def maxOfNumbers(a, b, c)
+#     if boolean and user
+#         puts("User and boolean is true so Printed the result...")
 
-    if a>b and b>c 
-        return puts("#{a} is greater thean other numbers")
-    elsif b>c
-        return puts("#{b} is greater thean other numbers")
-    else
-        return puts("#{c} is greater thean other numbers")
-    end
-end
+#     else 
+#         puts("User and boolean is false so Printed the result...")
+#     end
 
 
-maxOfNumbers(4, 8, 2)
+# end
+
+# conditonLoop()
 
 
-# Building a simple calculator in Ruby!
+# # using if statements with operators
 
-puts("SIMPLE CALCULATOR")
-puts ("================================")
-puts ("1: ADD")
-puts ("2: SUBTRACT")
-puts ("3: MULTIPLY")
-puts ("4: DIVIDE")
-puts ("5: POWER")
-puts ("6: MODULO")
+# isMale = false
+# isHieght = false
 
-puts ("Enter the first number")
-a = gets.chomp().to_i;
-puts ("Enter the second number")
-
-b = gets.chomp().to_i;
-
-puts ("Enter the Choice")
-
-choice = gets.chomp().to_i;
+# if isMale and isHieght 
+#     puts("You are a tall male")
+# elsif isMale or isHieght
+#     puts("you are a tall or male")
+# else
+#     puts("you are not a male and not so tall")
+# end
 
 
+# # Using if statements with relational operators!
 
 
-def calculator(a,b, choice)
+# def maxOfNumbers(a, b, c)
+
+#     if a>b and b>c 
+#         return puts("#{a} is greater thean other numbers")
+#     elsif b>c
+#         return puts("#{b} is greater thean other numbers")
+#     else
+#         return puts("#{c} is greater thean other numbers")
+#     end
+# end
+
+
+# maxOfNumbers(4, 8, 2)
+
+
+# # Building a simple calculator in Ruby!
+
+# puts("SIMPLE CALCULATOR")
+# puts ("================================")
+# puts ("1: ADD")
+# puts ("2: SUBTRACT")
+# puts ("3: MULTIPLY")
+# puts ("4: DIVIDE")
+# puts ("5: POWER")
+# puts ("6: MODULO")
+
+# puts ("Enter the first number")
+# a = gets.chomp().to_i;
+# puts ("Enter the second number")
+
+# b = gets.chomp().to_i;
+
+# puts ("Enter the Choice")
+
+# choice = gets.chomp().to_i;
+
+
+
+
+# def calculator(a,b, choice)
 
                 
-    if choice == 1
-puts ("================================")
+#     if choice == 1
+# puts ("================================")
 
-        return puts("Addition of #{a} and #{b} is #{a+b}")
-    elsif choice == 2
-puts ("================================")
+#         return puts("Addition of #{a} and #{b} is #{a+b}")
+#     elsif choice == 2
+# puts ("================================")
 
-            return puts("Subraction of #{a} and #{b} is #{a-b}")
-    elsif choice==3
-puts ("================================")
+#             return puts("Subraction of #{a} and #{b} is #{a-b}")
+#     elsif choice==3
+# puts ("================================")
         
-        return puts("Multiplicaiton of #{a} and #{b} is #{a*b}")
+#         return puts("Multiplicaiton of #{a} and #{b} is #{a*b}")
 
-    elsif choice == 4
-puts ("================================")
+#     elsif choice == 4
+# puts ("================================")
         
-        return puts("Division of #{a} and #{b} is #{a/b}")
+#         return puts("Division of #{a} and #{b} is #{a/b}")
 
-    elsif choice == 5
-        puts ("================================")
-        return puts ("Power of #{a} and #{b} is #{a**b}")
+#     elsif choice == 5
+#         puts ("================================")
+#         return puts ("Power of #{a} and #{b} is #{a**b}")
 
-    elsif choice == 6
-            puts ("================================")
-            return puts("Modulo of #{a} and #{b} is #{a%b}")
+#     elsif choice == 6
+#             puts ("================================")
+#             return puts("Modulo of #{a} and #{b} is #{a%b}")
 
-    else
+#     else
+# puts ("================================")
+
+#         puts ("Please choose a valid number")
+#     end
+# end
+
+
+
+# calculator(a,b,choice)
+
+
+# Hashing in Ruby with simple example
+
+# puts("Hashing")
+# puts ("================================")
+
+# week = {
+#     "mon" => "Monday", 
+#     "tue" => "Tuesday",
+#     "wed" => "Wednesday",
+#     "thu" => "Thursday",
+#     "fri" => "Friday",
+#     "sat" => "Saturday",
+#     "sun" => "Sunday"
+# }
+
+# puts ("Enter the week day")
+
+# choice = gets.chomp().downcase
+
+# puts (week[choice])
+
+
+# case in Ruby
+puts("Case expressions")
 puts ("================================")
 
-        puts ("Please choose a valid number")
+def find_day(userInput)
+    day = userInput.downcase
+    case day
+    when "mon" 
+        return "Monday"
+    when "tue" 
+        return "Tuesday"
+    when "wed" 
+            return "Wednesday"
+    when "thu" 
+            return "Thursday"
+    when "fri" 
+        return "Friday"
+    when "sat"
+        return "Saturday"
+    when "sun"
+        return "Sunday"
+    else 
+        return "Invalid day"
     end
 end
 
+puts ("Enter the week day")
 
+input = gets.chomp()
 
-calculator(a,b,choice)
+puts(find_day(input))
+
