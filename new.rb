@@ -295,3 +295,65 @@ while index <=5;
     index += 1;
 end
 
+# guessing game ...
+
+puts("Guessing game")
+puts ("================================")
+puts("Animal which has long neck")
+
+secret_word = 'giraffe'
+guess = ""
+no_of_guesses = 3
+present_guess = 0
+out_of_guesss = false
+
+while guess!= secret_word and !out_of_guesss
+    if no_of_guesses > present_guess
+        puts ("Enter your answer!")
+        guess = gets.chomp().downcase
+        present_guess += 1
+    else
+        out_of_guesss = true
+    end
+
+end
+
+if out_of_guesss 
+    puts("You lose")
+else
+    puts("You win")
+end
+
+
+# guessing game 
+
+puts("Guessing game")
+puts ("================================")
+puts ("what is the state animal of India")
+
+def guessingGame()
+guess = ""
+word = 'tiger'
+guess_count = 0
+total_guesses = 3
+out_of_guessss = false
+
+    while guess != word and !out_of_guessss
+        if total_guesses > guess_count
+            puts("Enter your answer!")
+            guess = gets.chomp().downcase
+            guess_count +=1
+        else 
+            out_of_guessss = true
+        end
+        
+    end
+    if out_of_guessss 
+        puts("You lose")
+    else
+        puts("You win!")
+    end
+
+end
+
+guessingGame();

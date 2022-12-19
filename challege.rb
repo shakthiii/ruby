@@ -90,3 +90,26 @@ findEle(number)
 
 
 
+=begin 
+
+=end
+
+puts ('================================================')
+puts ("fibonacci series")
+def fibonacci(num)
+    index = 1
+    sum = 0
+    if num == 0
+        return puts("0 is not a valid number ")
+    else 
+        while index <num
+
+            sum = sum-1 + index;
+            index += 1;
+            puts ("#{sum}")
+
+        end
+    end
+end
+
+fibonacci(10)
