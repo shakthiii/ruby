@@ -131,7 +131,7 @@ puts("Enter the number:")
 
 fibChoice = gets.chomp().to_i
 
-fib(fibChoice)
+# fib(fibChoice)
 
 =begin
 
@@ -176,4 +176,29 @@ puts("Enter the number you want to check:")
 
 choice = gets.chomp().to_i
 
-reverse(choice)
+# reverse(choice)
+
+=begin
+
+7) Factorial numbers
+The factorial of a number is the product of 
+all the positive integers that are less than 
+or equal to the number in question. For example, for the number 6, the factorial 
+would be 1 x 2 x 3 x 4 x 5 x 6 = 720.
+
+=end
+
+
+def fact(num)
+    index = 1
+    fact = 1
+    while num > index
+        fact = fact * index
+        index += 1
+    end
+    puts("the factorial number is: #{fact}")
+end
+
+fact(7)
+
+
