@@ -15,7 +15,7 @@ def sumOfTwoNumbers(a,b)
 end
 
 
-puts (sumOfTwoNumbers(5,9))
+# puts (sumOfTwoNumbers(5,9))
 
 
 =begin
@@ -39,7 +39,7 @@ def integerOfNumber(number)
 end
 
 
-puts (integerOfNumber(-8))
+# puts (integerOfNumber(-8))
 
 
 =begin
@@ -58,7 +58,7 @@ def rev(array)
 end
 
 
-print (rev([8, 2, 9, 4]))
+# print (rev([8, 2, 9, 4]))
 
 
 
@@ -86,7 +86,7 @@ end
 
 number =  [2, 1, 5, 4, 6, 9, 7, 8, 10]
 
-findEle(number)
+# findEle(number)
 
 
 
@@ -101,10 +101,11 @@ For example, if you have the sequence 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
 then the next number in the sequence is 55.
 =end
 
-puts ('================================================')
-puts ("===fibonacci series===")
+
 
 def fib(num)
+    puts ('================================================')
+puts ("===fibonacci series===")
 index = 2
 n1 =0
 n2 = 1
@@ -127,9 +128,9 @@ end
 
 end
 
-puts("Enter the number:")
+# puts("Enter the number:")
 
-fibChoice = gets.chomp().to_i
+# fibChoice = gets.chomp().to_i
 
 # fib(fibChoice)
 
@@ -144,11 +145,12 @@ repeating, such as 554, wouldn’t qualify
 
 =end
 
-puts ('================================================')
-puts ("===Check for Palindrome===")
+
 
 def reverse(num)
 
+    puts ('================================================')
+puts ("===Check for Palindrome===")
     n = num
     rev = 0
 
@@ -172,9 +174,9 @@ def reverse(num)
 
 end
 
-puts("Enter the number you want to check:")
+# puts("Enter the number you want to check:")
 
-choice = gets.chomp().to_i
+# choice = gets.chomp().to_i
 
 # reverse(choice)
 
@@ -199,6 +201,131 @@ def fact(num)
     puts("the factorial number is: #{fact}")
 end
 
-fact(7)
+# puts("Enter the number you want to factorial:")
+
+# factChoice = gets.chomp().to_i
+
+# fact(factChoice)
+
+
+=begin
+
+9) Prime number algorithm
+To create an algorithm that finds prime numbers, 
+you have to decide if the number in question can only
+be divided by itself and 1.
+
+=end
+
+def prime?(num)
+    n = num
+    index = 1
+    val = 0
+    while num >= index
+        if(n%index == 0)
+            val +=1
+        end
+        index +=1
+    end
+
+    # puts(val)
+    if(val == 2)
+        return true
+    else
+        return false
+    end
+end
+
+# puts ("Enter the number you want to check whether prime or not:")
+
+# prChoice = gets.chomp().to_i
+
+
+# prime(prChoice)
+
+
+=begin
+
+10.1) caluclate the sum of prime numbers in given 
+rage using normal method..
+
+=end
+
+
+def prSum(range)
+    sum = 0
+    for i in 1..range do
+        val = 0
+        for j in 1..i do
+            if(i%j == 0)
+                val +=1
+            end
+        end
+        if(val == 2)
+            sum = sum + i
+            # puts i
+        end 
+    end
+
+    puts("The sum of the prime numbers is: #{sum}")
+
+end
+
+
+# puts ("Enter the range: ")
+
+# prChoice = gets.chomp().to_i
+
+
+# prSum(prChoice)
+
+=begin
+
+10.2) Calculate the sum of prime numbers
+When calculating the sum of prime numbers, you first have to 
+identify the prime numbers within an array. You then have 
+to add all of these prime numbers together. In Ruby, you can 
+call an expression that selects the prime numbers from an array and then 
+use the “reduce” expression to add them together.
+
+
+=end
+
+
+def sum(arr)
+
+    prime = arr.select {|num| prime?(num) }
+
+    # puts prime
+
+    sum = prime.reduce(0) {|num, sum| sum+num}
+    
+    puts sum
+end
+
+array = (1..5).to_a
+
+sum(array)
+
+
+=begin
+
+8) Numbers greater than 5
+This problem involves finding the number of integers with a 
+value greater than 5.
+
+=end
+
+def greater(arr)
+
+    arr.select {|num|  num > 2}
+
+end
+
+
+p greater([1,2,3,4,5])
+
+p (1..30).to_a.select {|num| num>5}
+
 
 
