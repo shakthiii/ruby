@@ -253,107 +253,138 @@
 
 
 # case in Ruby
-puts("Case expressions")
-puts ("================================")
+# puts("Case expressions")
+# puts ("================================")
 
-def find_day(userInput)
-    day = userInput.downcase
-    case day
-    when "mon" 
-        return "Monday"
-    when "tue" 
-        return "Tuesday"
-    when "wed" 
-            return "Wednesday"
-    when "thu" 
-            return "Thursday"
-    when "fri" 
-        return "Friday"
-    when "sat"
-        return "Saturday"
-    when "sun"
-        return "Sunday"
-    else 
-        return "Invalid day"
-    end
-end
+# def find_day(userInput)
+#     day = userInput.downcase
+#     case day
+#     when "mon" 
+#         return "Monday"
+#     when "tue" 
+#         return "Tuesday"
+#     when "wed" 
+#             return "Wednesday"
+#     when "thu" 
+#             return "Thursday"
+#     when "fri" 
+#         return "Friday"
+#     when "sat"
+#         return "Saturday"
+#     when "sun"
+#         return "Sunday"
+#     else 
+#         return "Invalid day"
+#     end
+# end
 
-puts ("Enter the week day")
+# puts ("Enter the week day")
 
-input = gets.chomp()
+# input = gets.chomp()
 
-puts(find_day(input))
+# puts(find_day(input))
 
-# while loop 
+# # while loop 
 
-index = 1;
+# index = 1;
 
-while index <=5;
+# while index <=5;
 
-    puts("hello there #{index}")
-    # index++;
-    index += 1;
-end
+#     puts("hello there #{index}")
+#     # index++;
+#     index += 1;
+# end
 
-# guessing game ...
+# # guessing game ...
 
-puts("Guessing game")
-puts ("================================")
-puts("Animal which has long neck")
+# puts("Guessing game")
+# puts ("================================")
+# puts("Animal which has long neck")
 
-secret_word = 'giraffe'
-guess = ""
-no_of_guesses = 3
-present_guess = 0
-out_of_guesss = false
+# secret_word = 'giraffe'
+# guess = ""
+# no_of_guesses = 3
+# present_guess = 0
+# out_of_guesss = false
 
-while guess!= secret_word and !out_of_guesss
-    if no_of_guesses > present_guess
-        puts ("Enter your answer!")
-        guess = gets.chomp().downcase
-        present_guess += 1
-    else
-        out_of_guesss = true
-    end
+# while guess!= secret_word and !out_of_guesss
+#     if no_of_guesses > present_guess
+#         puts ("Enter your answer!")
+#         guess = gets.chomp().downcase
+#         present_guess += 1
+#     else
+#         out_of_guesss = true
+#     end
 
-end
+# end
 
-if out_of_guesss 
-    puts("You lose")
-else
-    puts("You win")
-end
+# if out_of_guesss 
+#     puts("You lose")
+# else
+#     puts("You win")
+# end
 
 
-# guessing game 
+# # guessing game 
 
-puts("Guessing game")
-puts ("================================")
-puts ("what is the state animal of India")
+# puts("Guessing game")
+# puts ("================================")
+# puts ("what is the state animal of India")
 
-def guessingGame()
-guess = ""
-word = 'tiger'
-guess_count = 0
-total_guesses = 3
-out_of_guessss = false
+# def guessingGame()
+# guess = ""
+# word = 'tiger'
+# guess_count = 0
+# total_guesses = 3
+# out_of_guessss = false
 
-    while guess != word and !out_of_guessss
-        if total_guesses > guess_count
-            puts("Enter your answer!")
-            guess = gets.chomp().downcase
-            guess_count +=1
-        else 
-            out_of_guessss = true
-        end
+#     while guess != word and !out_of_guessss
+#         if total_guesses > guess_count
+#             puts("Enter your answer!")
+#             guess = gets.chomp().downcase
+#             guess_count +=1
+#         else 
+#             out_of_guessss = true
+#         end
         
-    end
-    if out_of_guessss 
-        puts("You lose")
-    else
-        puts("You win!")
-    end
+#     end
+#     if out_of_guessss 
+#         puts("You lose")
+#     else
+#         puts("You win!")
+#     end
 
+# end
+
+# guessingGame();
+
+
+friends = ['kevin', 'james', 'oscar', 'andreas', 'john']
+
+for friend in friends
+    puts(friend)
 end
 
-guessingGame();
+# using do while in Ruby
+
+puts ('================================================================')
+
+friends.each do |friend|
+    puts friend
+end
+
+
+# loop throught the array in Ruby
+
+for index in 0..5
+    puts index
+end
+
+puts ('================================================================')
+
+
+# loop through the array in Ruby other method
+
+6.times do |friend|
+    puts friend
+end

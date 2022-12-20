@@ -91,25 +91,89 @@ findEle(number)
 
 
 =begin 
+5) Fibonacci algorithm
+A Fibonacci Sequence is created by adding 
+two numbers to create the next number in the 
+sequence. You then sum that number with the 
+one preceding it to get the next number,, 
+and so on.
+For example, if you have the sequence 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 
+then the next number in the sequence is 55.
+=end
+
+puts ('================================================')
+puts ("===fibonacci series===")
+
+def fib(num)
+index = 2
+n1 =0
+n2 = 1
+sum = 0
+puts(n1)
+puts(n2)
+if num == 0
+        return 0
+elsif num == 1
+    return 1
+else
+    while num > index
+        sum = n1 + n2
+        n1 = n2
+        n2 = sum
+        index += 1
+        puts ("#{sum}")
+    end
+end
+
+end
+
+puts("Enter the number:")
+
+fibChoice = gets.chomp().to_i
+
+fib(fibChoice)
+
+=begin
+
+6) Check for repeated digits
+You can use Ruby to analyze a number to see 
+if it has repeated digits in it. Your objective is to use Ruby to validate whether or not the number is made up of a series of the same digit in a row.
+For example, the number 555 would qualify. 
+A number with only two out of three digits 
+repeating, such as 554, wouldn’t qualify
 
 =end
 
 puts ('================================================')
-puts ("fibonacci series")
-def fibonacci(num)
-    index = 1
-    sum = 0
+puts ("===Check for Palindrome===")
+
+def reverse(num)
+
+    n = num
+    rev = 0
+
     if num == 0
-        return puts("0 is not a valid number ")
+        puts("0 is not a valid number")
+        return 0
+    elsif num <= 9
+        return puts("Provide a valid number")
     else 
-        while index <num
-
-            sum = sum-1 + index;
-            index += 1;
-            puts ("#{sum}")
-
+        while n > 0
+            mod = n%10
+            rev = rev * 10 +mod 
+            n = n/10
         end
     end
+    if (num == rev)
+        puts("It is a palindrome")
+    else
+        puts("It is not a palindrome")
+    end
+
 end
 
-fibonacci(10)
+puts("Enter the number you want to check:")
+
+choice = gets.chomp().to_i
+
+reverse(choice)
