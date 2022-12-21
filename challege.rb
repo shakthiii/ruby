@@ -15,7 +15,7 @@ def sumOfTwoNumbers(a,b)
 end
 
 
-# puts (sumOfTwoNumbers(5,9))
+# puts (sumOfTwoNumbers(5, 15))
 
 
 =begin
@@ -39,7 +39,7 @@ def integerOfNumber(number)
 end
 
 
-# puts (integerOfNumber(-8))
+# puts (integerOfNumber(-7))
 
 
 =begin
@@ -58,7 +58,7 @@ def rev(array)
 end
 
 
-# print (rev([8, 2, 9, 4]))
+# print (rev([8, 2, 9, 4, 8, 9]))
 
 
 
@@ -84,7 +84,7 @@ def findEle(arr)
     end
 end
 
-number =  [2, 1, 5, 4, 6, 9, 7, 8, 10]
+number =  [2, 1, 4, 6, 9, 7, 8, 10]
 
 # findEle(number)
 
@@ -194,8 +194,10 @@ would be 1 x 2 x 3 x 4 x 5 x 6 = 720.
 def fact(num)
     index = 1
     fact = 1
-    while num > index
+    while num >= index
+        
         fact = fact * index
+        # p fact
         index += 1
     end
     puts("the factorial number is: #{fact}")
@@ -305,7 +307,7 @@ end
 
 array = (1..5).to_a
 
-sum(array)
+# sum(array)
 
 
 =begin
@@ -323,9 +325,9 @@ def greater(arr)
 end
 
 
-p greater([1,2,3,4,5])
+# p greater([1,2,3,4,5])
 
-p (1..30).to_a.select {|num| num>5}
+# p (1..30).to_a.select {|num| num>5}
 
 
 

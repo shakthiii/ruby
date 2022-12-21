@@ -383,8 +383,61 @@ end
 puts ('================================================================')
 
 
-# loop through the array in Ruby other method
+# Block in Ruby
 
 6.times do |friend|
     puts friend
+end
+
+
+array = %w(The fox jumped over the lazy dog)
+
+array.each do |char|
+    puts char
+end
+
+3.times do 
+    puts "hello world 222"
+end
+
+for i in 1..5
+    p i
+end
+
+
+numbers = (1..10).to_a
+
+p numbers.map {|num| num*2}
+
+fourArray = numbers.select {|num| num%4 == 0}
+
+p fourArray.reduce(0) {|sum, num| sum+num}
+
+a = 1;
+until a == 5
+    p "hello omega!"
+    a +=1
+
+end
+
+p a
+
+unless a == 2
+    p "the value is 2"
+else 
+    p  "the other values are OKK"
+end
+
+
+for i in 1..10
+    if i==3
+        next
+    else
+        p i
+    end
+end
+
+
+for i in 'a'..'z'
+    print i, " "
 end
