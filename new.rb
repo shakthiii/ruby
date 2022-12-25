@@ -385,59 +385,117 @@ puts ('================================================================')
 
 # Block in Ruby
 
-6.times do |friend|
-    puts friend
-end
+# 6.times do |friend|
+#     puts friend
+# end
 
 
-array = %w(The fox jumped over the lazy dog)
+# array = %w(The fox jumped over the lazy dog)
 
-array.each do |char|
-    puts char
-end
+# array.each do |char|
+#     puts char
+# end
 
-3.times do 
-    puts "hello world 222"
-end
+# 3.times do 
+#     puts "hello world 222"
+# end
 
-for i in 1..5
-    p i
-end
-
-
-numbers = (1..10).to_a
-
-p numbers.map {|num| num*2}
-
-fourArray = numbers.select {|num| num%4 == 0}
-
-p fourArray.reduce(0) {|sum, num| sum+num}
-
-a = 1;
-until a == 5
-    p "hello omega!"
-    a +=1
-
-end
-
-p a
-
-unless a == 2
-    p "the value is 2"
-else 
-    p  "the other values are OKK"
-end
+# for i in 1..5
+#     p i
+# end
 
 
-for i in 1..10
-    if i==3
-        next
-    else
-        p i
+# numbers = (1..10).to_a
+
+# p numbers.map {|num| num*2}
+
+# fourArray = numbers.select {|num| num%4 == 0}
+
+# p fourArray.reduce(0) {|sum, num| sum+num}
+
+# a = 1;
+# until a == 5
+#     p "hello omega!"
+#     a +=1
+
+# end
+
+# p a
+
+# unless a == 2
+#     p "the value is 2"
+# else 
+#     p  "the other values are OKK"
+# end
+
+
+# for i in 1..10
+#     if i==3
+#         next
+#     else
+#         p i
+#     end
+# end
+
+
+# for i in 'a'..'z'
+#     print i, " "
+# end
+
+# sorting in ruby
+
+newArrr = [4,5,6,1,23,3, 2]
+
+p newArrr
+
+p newArrr.sort {|x,y| y <=> x}
+
+
+def school(*club)
+    # club.each do 
+    #     |club| p "Hello, #{club}"
+    # end
+    for i in (0..(club.length)-1)
+        p "Hello, #{club[i]}"
     end
 end
+school('a', 'b', 'c', 'dabe')
 
 
-for i in 'a'..'z'
-    print i, " "
+
+
+
+print "what's your input?"
+user_input = gets.chomp().downcase
+
+until user_input.match(/[Ss]/)
+    print "what's your input?"
+user_input = gets.chomp().downcase
 end
+
+
+if user_input.include? "s"
+    puts "s occured in #{user_input}"
+    user_input.gsub!(/[Ss]/, "S" => "Th", "s" => "th")
+    puts "Your string is: #{user_input}"
+else
+    puts("you are not allowed #{user_input}")
+end
+
+
+i = 20
+
+loop do
+next if i%2!=0
+puts i
+i -=1
+break if i<0
+end
+
+
+
+s = [["ham", "swiss"], ["turkey", "cheddar"], ["roast beef", "gruyere"]]
+
+
+
+s.each { |x| puts x}
